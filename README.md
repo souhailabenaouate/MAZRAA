@@ -1,4 +1,4 @@
-# 🌱 MAZRA'A – Smart Agricultural Assistance Platform
+# 🌱 MAZRA'A – how to run the project
 
 ## About the Project
 
