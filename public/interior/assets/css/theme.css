@@ -1,0 +1,123 @@
+/* ============================================================
+   Mazra'a interior - landing/login theme layer (loaded after styles.css)
+   Same palette, fonts and dark mode as the React landing + login.
+   ============================================================ */
+:root{
+  --cream-3:#F8F5F1; --white:#FCFCFB; --ink:#3A2210; --dark:#3A2210;
+  --sage:#889B82; --sage-2:#889B82; --sage-3:#5F7559; --brown:#784C33; --brown-2:#784C33;
+  --line:#E2D7CB; --cream:#D2BAA4;
+  --font:"Nunito","Cairo","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --serif:"Nunito","Cairo","Segoe UI",system-ui,sans-serif;
+  --pop-bg:var(--white);
+}
+html[dir="rtl"] body{font-family:"Cairo","Nunito","Segoe UI",Tahoma,sans-serif}
+body{transition:background-color .25s,color .25s}
+.h1,.h2,.hero h1,.q-text,.paper-title,.kpi .k-val,.gharss-card .g-name{font-weight:800}
+.eyebrow,.h3{font-weight:800}
+
+/* primary buttons: sage with dark-brown text, like the landing */
+.btn{background:var(--sage);border-color:var(--sage);color:#3A2210;box-shadow:0 6px 24px -10px rgba(58,34,16,.35)}
+.btn:hover{background:#7D9077}
+.btn.ghost:hover{background:var(--cream-2)}
+.btn.dark{color:#FBF7F1}
+
+/* ---------- brand (same logo as the landing) ---------- */
+.brand{display:inline-flex;align-items:center;gap:8px;min-width:0}
+.brand-mark{width:auto;display:block;flex:none}
+.brandline img.brand-mark{width:auto;border-radius:0;object-fit:contain}
+.brand-txt{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.brand-word{font-weight:800;letter-spacing:.05em;color:var(--brown);font-size:17px;white-space:nowrap;text-transform:none}
+.brand-txt .brand-sub{font-size:11px;color:var(--muted);margin-top:2px;white-space:nowrap}
+.drawer-head .brand-word{font-size:19px}
+.paper-head img.paper-logo{width:auto;height:46px}
+
+/* ---------- top bar ---------- */
+.topbar{background:linear-gradient(var(--cream-3) 80%,transparent);gap:8px}
+@media (max-width:420px){.status-txt{display:none}.status{padding:11px}.brand-word{font-size:15px}}
+
+/* ---------- account (top right) ---------- */
+.acct{position:relative;flex:none}
+.acct-btn{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--cream-2);border:1px solid var(--line);color:var(--brown);transition:transform .15s,background .2s}
+.acct-btn:hover{background:var(--sage-tint)}
+.acct-btn:active{transform:scale(.95)}
+.acct-btn svg{width:23px;height:23px}
+.acct-pop{position:absolute;top:calc(100% + 10px);inset-inline-end:0;width:min(300px,calc(100vw - 28px));z-index:90;
+  background:var(--pop-bg);border:1px solid var(--line);border-radius:26px;padding:16px;box-shadow:var(--shadow-2);
+  display:flex;flex-direction:column;gap:12px;animation:popin .18s cubic-bezier(.2,.8,.2,1) both;transform-origin:top right}
+html[dir="rtl"] .acct-pop{transform-origin:top left}
+@keyframes popin{from{opacity:0;transform:translateY(-6px) scale(.97)}to{opacity:1;transform:none}}
+.acct-who{display:flex;align-items:center;gap:12px}
+.acct-av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--sage-tint);color:var(--sage-3);flex:none}
+.acct-av svg{width:24px;height:24px}
+.acct-name{font-size:18px;font-weight:800;color:var(--dark);line-height:1.2;word-break:break-word}
+.acct-row{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.acct-lbl{font-size:12px;font-weight:800;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.acct-lang{width:100%}
+.acct-theme{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:14px;border:1px solid var(--line);background:var(--cream-2);color:var(--brown);font-weight:700;font-size:13.5px}
+.acct-theme svg{width:18px;height:18px}
+.acct-out{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border-radius:16px;border:1px solid var(--line);background:var(--white);font-weight:800;font-size:15px;color:var(--ink)}
+.acct-out:hover{background:var(--cream-2)}
+.acct-out svg{width:19px;height:19px}
+.db-top .acct{margin-inline-start:2px}
+
+/* ============================================================
+   Dark mode (deep green, same tokens as the landing)
+   ============================================================ */
+html[data-theme="dark"]{color-scheme:dark}
+[data-theme="dark"]{
+  --cream-3:#0E1C16; --white:#162A21; --cream-2:#1B3328; --sage-tint:#1F3A2C; --brown-tint:#243A2E;
+  --ink:#F0ECE2; --dark:#F0ECE2; --muted:#A9B8A8; --line:#2C4639; --cream:#D2BAA4;
+  --sage:#8EA688; --sage-2:#8EA688; --sage-3:#A9C3A0; --brown:#B2C7A8; --brown-2:#B2C7A8;
+  --good:#8EA688; --warn:#D6B06C; --bad:#C47660;
+  --shadow-1:0 1px 2px rgba(0,0,0,.25),0 10px 26px rgba(0,0,0,.25);
+  --shadow-2:0 18px 50px rgba(0,0,0,.5);
+}
+[data-theme="dark"] body{background:radial-gradient(1000px 600px at 15% -10%,#17332A 0%,transparent 60%),radial-gradient(900px 500px at 100% 100%,#122A21 0%,transparent 55%),#0E1C16}
+[data-theme="dark"] .brand-mark{filter:drop-shadow(0 0 6px rgba(255,255,255,.18))}
+[data-theme="dark"] .btn:not(.ghost):not(.secondary):not(.dark){color:#10201A}
+[data-theme="dark"] .btn:not(.ghost):not(.secondary):not(.dark):hover,[data-theme="dark"] .act.primary:hover{background:#9DB596}
+[data-theme="dark"] .app{background:var(--cream-3);box-shadow:0 0 0 1px rgba(255,255,255,.04),0 30px 80px rgba(0,0,0,.45)}
+[data-theme="dark"] .topbar{background:linear-gradient(var(--cream-3) 80%,transparent)}
+[data-theme="dark"] .bottom{background:linear-gradient(rgba(14,28,22,0),var(--cream-3) 38%)}
+[data-theme="dark"] .scrim{background:rgba(4,10,7,.6)}
+
+/* surfaces that had a literal white background */
+[data-theme="dark"] :is(.skip:focus,.menu-item:hover,.menu-item.active,.lang-switch button.on,.q-card,.pic-btn,.check-row,.result-banner .ic,.cause,.solution,.light,.choice,.rot-card,.learn-card,.msg.bot,.chat-quick button,.chat-input input,.chip,.alert-card,.kpi,.panel,.drawer-db .dh,.inbox-item,.act,.seg button.on,.swipe-handle,.swipe-handle:after,input[type="range"]::-webkit-slider-thumb,input[type="range"]::-moz-range-thumb){background:var(--white);color:var(--ink)}
+[data-theme="dark"] .map-chip{background:rgba(22,42,33,.94);color:var(--ink)}
+[data-theme="dark"] :is(.card.cream,.gharss-card,.gharss-card img,.limits,.db-note,.inbox-item:hover,table.dt th,table.dt tr:hover td,.act.danger){background:var(--cream-2)}
+[data-theme="dark"] .db{background:#0B1812}
+[data-theme="dark"] .bbtn.gharss{background:#1B3328}
+[data-theme="dark"] .card.sage{background:var(--sage-tint);border-color:var(--line)}
+
+/* dark surfaces that used --dark as a background */
+[data-theme="dark"] :is(.card.dark,.btn.dark,.chip.on,.chat-input .send,.lay-btn.on,.toast){background:#2C4A3A;border-color:#3B5F4B;color:#F0ECE2}
+[data-theme="dark"] .chat-input .send{color:#F0ECE2}
+[data-theme="dark"] .card.dark :is(.h2,.h3){color:#F0ECE2}
+
+/* status tints */
+[data-theme="dark"] :is(.status.off,.queue-strip,.tag.warn,.conf.dot-2,.mini.risk,.risk-pill.mid,.kpi .k-trend.warn,.alert-card .a-ic,.result-banner.warn){background:#3A3322;border-color:#54492B;color:#E7CB8E}
+[data-theme="dark"] :is(.tag.bad,.conf.dot-1,.risk-pill.high,.kpi .k-trend.down,.alert-card.bad .a-ic,.tile.report .t-ic,.result-banner.bad){background:#3B2722;border-color:#59372F;color:#E8A896}
+[data-theme="dark"] :is(.tag.sage,.status){background:var(--sage-tint);border-color:var(--line);color:var(--sage-3)}
+[data-theme="dark"] :is(.tag,.mini.gap,.kpi .k-trend.flat){background:var(--cream-2);border-color:var(--line);color:var(--brown)}
+[data-theme="dark"] .tag.ghost{background:transparent;color:var(--muted)}
+[data-theme="dark"] .result-banner{background:linear-gradient(120deg,#1F3A2C,#183026)}
+[data-theme="dark"] :is(.meter,.progress i,.cal .m .bar,.conf-bars i,.bars-risk .track){background:#2A4136}
+[data-theme="dark"] .map-frame{background:linear-gradient(160deg,#16291F,#10211A)}
+
+/* the printable report stays a white paper, even in dark mode */
+[data-theme="dark"] .paper{--white:#fff;--ink:#2C1F19;--dark:#3B2A21;--muted:#7B6A5D;--line:#E4D6C6;--brown:#6E4529;--sage-3:#5C775C;--cream-2:#F3E9DD;background:#fff;color:#2C1F19}
+[data-theme="dark"] .paper :is(.limits){background:#FDFAF5}
+@media print{
+  [data-theme="dark"]{--cream-3:#fff;--white:#fff;--ink:#2C1F19;--dark:#3B2A21;--muted:#7B6A5D;--line:#E4D6C6;--brown:#6E4529;--cream-2:#F3E9DD}
+  .acct,.status{display:none!important}
+}
+
+/* ---------- page transition in (login -> app) ---------- */
+html.enter .app{animation:appin .55s cubic-bezier(.2,.7,.2,1) both}
+@keyframes appin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.light{cursor:pointer}
+
+/* dashboard: the account button always sits at the top right, even when the toolbar wraps */
+.db-top{position:relative;padding-inline-end:78px}
+.db-top .acct{position:absolute;top:12px;inset-inline-end:16px;margin:0}
+@media print{.db-top .acct{display:none!important}}

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6FA2BE"/>
+      <stop offset=".45" stop-color="#A7C4C6"/>
+      <stop offset="1" stop-color="#DDE2C4"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#FFF7DC" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#FFF7DC" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloudA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D8DED0"/>
+    </linearGradient>
+    <linearGradient id="cloudB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2F2E6"/><stop offset="1" stop-color="#BFC9B8"/>
+    </linearGradient>
+    <linearGradient id="ridgeA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#A3B894"/><stop offset="1" stop-color="#849B77"/>
+    </linearGradient>
+    <linearGradient id="ridgeB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7E9766"/><stop offset="1" stop-color="#5F7A50"/>
+    </linearGradient>
+    <linearGradient id="fieldA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8AA96A"/><stop offset="1" stop-color="#688753"/>
+    </linearGradient>
+    <linearGradient id="fieldB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#69854F"/><stop offset="1" stop-color="#48633F"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="300" fill="url(#sky)"/>
+  <ellipse cx="104" cy="80" rx="130" ry="105" fill="url(#glow)"/>
+  <circle cx="104" cy="78" r="30" fill="#FFDF9F"/>
+
+  <g fill="url(#cloudB)" opacity=".95">
+    <g transform="translate(340,36) scale(1.15)"><ellipse cx="0" cy="14" rx="60" ry="16"/><circle cx="-26" cy="2" r="16"/><circle cx="4" cy="-8" r="21"/><circle cx="34" cy="4" r="14"/></g>
+    <g transform="translate(180,26) scale(.85)"><ellipse cx="0" cy="12" rx="50" ry="13"/><circle cx="-22" cy="2" r="13"/><circle cx="4" cy="-6" r="17"/></g>
+  </g>
+  <g fill="url(#cloudA)">
+    <g transform="translate(230,74) scale(1.2)"><ellipse cx="0" cy="14" rx="62" ry="16"/><circle cx="-28" cy="2" r="17"/><circle cx="4" cy="-8" r="22"/><circle cx="36" cy="4" r="14"/></g>
+    <g transform="translate(72,132) scale(.7)"><ellipse cx="0" cy="10" rx="44" ry="11"/><circle cx="-19" cy="2" r="11"/><circle cx="4" cy="-5" r="14"/></g>
+  </g>
+  <g fill="#FFFFFF" opacity=".35"><ellipse cx="230" cy="70" rx="48" ry="9"/></g>
+  <g fill="#AEBFAF" opacity=".45"><ellipse cx="340" cy="52" rx="58" ry="8"/><ellipse cx="230" cy="88" rx="56" ry="7"/></g>
+
+  <path d="M0 162c54-32 96-42 140-34 36 6 62 22 86 40 32-22 70-28 110-18 30 8 54 20 74 34 30-16 60-18 70-2v118H0z" fill="url(#ridgeA)"/>
+  <path d="M0 198c46-24 84-30 124-22 36 8 62 24 84 42 36-18 74-22 110-12 30 8 54 20 72 34 30-12 60-12 90 2v58H0z" fill="url(#ridgeB)"/>
+
+  <path d="M0 230c72-22 134-22 198-6 66 17 130 14 196-6 36-10 62-10 86-2v84H0z" fill="url(#fieldA)"/>
+  <path d="M0 262c80-12 148-6 216 10 64 16 128 14 264-8v36H0z" fill="url(#fieldB)"/>
+  <g stroke="#D9E3B9" stroke-width="2" opacity=".4" fill="none">
+    <path d="M0 240c72-20 132-20 196-4 66 17 130 13 196-7 36-10 62-10 88-2"/>
+  </g>
+
+  <g fill="#3E5540" opacity=".9">
+    <g transform="translate(74,244)"><path d="M0 0v-28" stroke="#453325" stroke-width="4"/><ellipse cx="-13" cy="-34" rx="15" ry="9"/><ellipse cx="2" cy="-44" rx="18" ry="11"/><ellipse cx="16" cy="-32" rx="13" ry="8"/></g>
+    <g transform="translate(420,238)"><path d="M0 0v-22" stroke="#453325" stroke-width="3.5"/><ellipse cx="-11" cy="-28" rx="12" ry="8"/><ellipse cx="3" cy="-36" rx="15" ry="9"/><ellipse cx="14" cy="-26" rx="10" ry="7"/></g>
+  </g>
+
+  <g transform="translate(300,200)">
+    <rect x="0" y="10" width="56" height="32" fill="#F1E4D2"/>
+    <path d="M-7 10L28-12l35 22z" fill="#8A5A3B"/>
+    <rect x="9" y="24" width="12" height="18" fill="#6E4529"/>
+    <rect x="34" y="24" width="12" height="12" fill="#B9895F"/>
+  </g>
+</svg>
